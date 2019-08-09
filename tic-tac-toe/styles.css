@@ -1,0 +1,22 @@
+.tile {
+  --length: 80px;
+  width: var(--length);
+  height: var(--length);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: 2px solid black;
+  border-radius: 8px;
+  margin: 2px 0;
+  outline: 0;
+}
+
+.tile:hover {
+  background-color: #e4e4e4;
+  cursor: pointer;
+}
+
+#restart-button {
+  display: none;
+}

@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Tic-tac-toe</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./game.js" defer></script>
+  </head>
+  <body>
+    <h1>Tic-tac-toe</h1>
+    <p>
+      <strong id="ending-text"></strong>
+    </p>
+    <span id="cur-player-text">Player X's turn</span>
+    <div>
+      <button class="tile" onclick="chooseTile(0)"><span class="tile-text">&nbsp;</span></button>
+      <button class="tile" onclick="chooseTile(1)"><span class="tile-text">&nbsp;</span></button>
+      <button class="tile" onclick="chooseTile(2)"><span class="tile-text">&nbsp;</span></button>
+    </div>
+    <div>
+      <button class="tile" onclick="chooseTile(3)"><span class="tile-text">&nbsp;</span></button>
+      <button class="tile" onclick="chooseTile(4)"><span class="tile-text">&nbsp;</span></button>
+      <button class="tile" onclick="chooseTile(5)"><span class="tile-text">&nbsp;</span></button>
+    </div>
+    <div>
+      <button class="tile" onclick="chooseTile(6)"><span class="tile-text">&nbsp;</span></button>
+      <button class="tile" onclick="chooseTile(7)"><span class="tile-text">&nbsp;</span></button>
+      <button class="tile" onclick="chooseTile(8)"><span class="tile-text">&nbsp;</span></button>
+    </div>
+    <button onclick="restartGame()" id="restart-button">Restart</button>
+  </body>
+</html>
