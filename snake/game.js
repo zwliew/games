@@ -128,26 +128,40 @@ window.addEventListener('load', () => {
 
   window.addEventListener('keydown', ({code}) => {
     switch (code) {
-      case 'KeyR':
-        if (!running) {
-          startGame();
+      case 'KeyP':
+        if (running) {
+          running = false;
+        } else {
+          running = true;
+          window.requestAnimationFrame(draw);
         }
+        break;
+      case 'KeyR':
+        startGame();
         break;
       case 'KeyW':
       case 'ArrowUp':
-        dir = {x: 0, y: -1};
+        if (snake.length === 1 || dir.y !== 1) {
+          dir = {x: 0, y: -1};
+        }
         break;
       case 'KeyD':
       case 'ArrowRight':
-        dir = {x: 1, y: 0};
+        if (snake.length === 1 || dir.x !== -1) {
+          dir = {x: 1, y: 0};
+        }
         break;
       case 'KeyS':
       case 'ArrowDown':
-        dir = {x: 0, y: 1};
+        if (snake.length === 1 || dir.y !== -1) {
+          dir = {x: 0, y: 1};
+        }
         break;
       case 'KeyA':
       case 'ArrowLeft':
-        dir = {x: -1, y: 0};
+        if (snake.length === 1 || dir.x !== 1) {
+          dir = {x: -1, y: 0};
+        }
         break;
     }
   });
